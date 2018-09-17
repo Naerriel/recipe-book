@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { ShoppingListComponent } from './shopping-list.component';
 import { ShoppingEditComponent } from './shopping-edit/shopping-edit.component';
+import { EffectsModule } from '@ngrx/effects';
+import { ShoppingListEffects } from './store/shopping-list.effects';
+import { RecipeEffects } from '../recipes/store/recipe.effects';
 
 @NgModule({
   declarations: [
@@ -12,7 +15,8 @@ import { ShoppingEditComponent } from './shopping-edit/shopping-edit.component';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    EffectsModule.forFeature([ShoppingListEffects])
   ]
 })
 export class ShoppingListModule {}
