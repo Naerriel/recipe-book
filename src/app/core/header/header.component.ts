@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { HttpEvent, HttpEventType } from '@angular/common/http';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
