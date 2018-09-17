@@ -27,6 +27,10 @@ export class AuthEffects {
             type: AuthActions.SIGNUP
           },
           {
+            type: AuthActions.SET_UID,
+            payload: firebase.auth().currentUser.uid
+          },
+          {
             type: AuthActions.SET_TOKEN,
             payload: token
           }
@@ -50,6 +54,10 @@ export class AuthEffects {
         return [
           {
             type: AuthActions.SIGNIN
+          },
+          {
+            type: AuthActions.SET_UID,
+            payload: firebase.auth().currentUser.uid
           },
           {
             type: AuthActions.SET_TOKEN,

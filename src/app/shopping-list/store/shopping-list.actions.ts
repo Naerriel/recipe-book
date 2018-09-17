@@ -2,12 +2,20 @@ import { Action } from '@ngrx/store';
 
 import { Ingredient } from '../../shared/ingredient.model';
 
+export const SET_INGREDEINTS = 'SET_INGREDIENTS';
 export const ADD_INGREDIENT = 'ADD_INGREDIENT';
 export const ADD_INGREDIENTS = 'ADD_INGREDIENTS';
 export const UPDATE_INGREDIENT = 'UPDATE_INGREDIENT';
 export const DELETE_INGREDIENT = 'DELETE_INGREDIENT';
 export const START_EDIT = 'START_EDIT';
 export const STOP_EDIT = 'STOP_EDIT';
+export const FETCH_SL = 'FETCH_SL';
+
+export class SetIngredients implements Action {
+  readonly type = SET_INGREDEINTS;
+
+  constructor(public payload: Ingredient[]) {}
+}
 
 export class AddIngredient implements Action {
   readonly type = ADD_INGREDIENT;
@@ -41,10 +49,16 @@ export class StopEdit implements Action {
   readonly type = STOP_EDIT;
 }
 
+export class FetchSL implements Action {
+  readonly type = FETCH_SL;
+}
+
 export type ShoppingListActions =
+  SetIngredients |
   AddIngredient |
   AddIngredients |
   UpdateIngredient |
   DeleteIngredient |
   StartEdit |
+  FetchSL |
   StopEdit;

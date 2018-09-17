@@ -1,9 +1,18 @@
 <div class="row">
-  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+  <div class="col-sm-4 col-sm-offset-4">
+    <h4 class="text-center">Create your account</h4>
+    <h5 class="text-center">to continue to Recipe Book</h5>
+    <hr>
     <form (ngSubmit)="onSignup(f)" #f="ngForm">
       <div class="form-group">
         <label for="email">Mail</label>
-        <input type="email" id="email" name="email" ngModel class="form-control">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@mail.com"
+          ngModel
+          class="form-control">
       </div>
       <div class="form-group">
         <label for="password">Password</label>
@@ -16,6 +25,7 @@
       </div>
       <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Sign Up</button>
     </form>
+    <a routerLink="/signin">Sign in instead</a>
   </div>
 </div>
 

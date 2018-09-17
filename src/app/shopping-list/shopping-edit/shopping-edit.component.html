@@ -16,13 +16,12 @@
         <div class="col-sm-2 form-group">
           <label for="amount">Amount</label>
           <input
-            type="number"
+            type="text"
             id="amount"
             class="form-control"
             name="amount"
             ngModel
             required
-            pattern="^[1-9]+[0-9]*$"
           >
         </div>
       </div>
@@ -36,7 +35,7 @@
             class="btn btn-danger"
             type="button"
             (click)="onDelete()"
-            *ngIf="editMode">Delete</button>
+            [disabled]="!editMode">Delete</button>
           <button class="btn btn-primary" type="button" (click)="onClear()">Clear</button>
         </div>
       </div>

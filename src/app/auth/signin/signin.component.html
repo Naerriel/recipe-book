@@ -1,5 +1,8 @@
 <div class="row">
-  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+  <div class="col-sm-4 col-sm-offset-4">
+    <h4 class="text-center">Sign in</h4>
+    <h5 class="text-center">to continue to Recipe Book</h5>
+    <hr>
     <form (ngSubmit)="onSignin(f)" #f="ngForm">
       <div class="form-group">
         <label for="email">Mail</label>
@@ -16,6 +19,7 @@
       </div>
       <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Sign In</button>
     </form>
+    <a routerLink="/signup">Create account</a>
   </div>
 </div>
 
