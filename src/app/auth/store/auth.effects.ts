@@ -70,7 +70,7 @@ export class AuthEffects {
   authLogout = this.actions$
     .ofType(AuthActions.LOGOUT)
     .pipe(tap(() => {
-      this.router.navigate(['/']);
+      this.router.navigate(['/signin']);
     }));
 
   constructor(private actions$: Actions, private router: Router) {
